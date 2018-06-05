@@ -1,0 +1,489 @@
+html {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: #393939;
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.safezone {
+  max-width: 480px;
+  max-height: 1040px;
+}
+body {
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.4;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  border: 0;
+  /* Rectangle: */
+  background-image: radial-gradient(circle at center 80%, #ecb254 11%, #e39863 37%, #bd22a4 64%, #3c2376 100%);
+  -webkit-box-shadow: 0 2px 14px rgba(17, 17, 17, 0.2);
+          box-shadow: 0 2px 14px rgba(17, 17, 17, 0.2);
+  max-width: 480px;
+  max-height: 1040px;
+}
+img {
+  max-width: 100%;
+}
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.gamebg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-animation-name: perspective;
+          animation-name: perspective;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-timing-function: cubic-bezier(0, 0, 0.21, 1.09);
+          animation-timing-function: cubic-bezier(0, 0, 0.21, 1.09);
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-perspective: 500;
+          perspective: 500;
+}
+.gamebg .layer {
+  width: 100%;
+  height: 100%;
+}
+.gamebg .special_coupons {
+  position: absolute;
+  z-index: -1;
+  top: -17px;
+  right: -17px;
+  width: 76px;
+  -webkit-transform-origin: 20% 50%;
+          transform-origin: 20% 50%;
+  -webkit-animation-name: special_coupons;
+          animation-name: special_coupons;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+.gamebg .earth > div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-image: url(../images/earth@3x.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% auto;
+}
+.gamebg .phone > div {
+  position: absolute;
+  bottom: 14%;
+  left: -6%;
+  width: 66%;
+  height: 100%;
+  background-image: url(../images/phone@3x.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% auto;
+}
+.gamebg .pocket > div {
+  position: absolute;
+  right: -6%;
+  bottom: 18%;
+  width: 66%;
+  height: 100%;
+  background-image: url(../images/pocket@3x.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% auto;
+}
+.gamebg .title > div {
+  width: 84%;
+  margin: 60px auto;
+}
+.gamebg .countdown > div {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  width: 170px;
+  margin: 44px auto;
+  padding: 2px;
+  text-align: center;
+  color: #fff;
+  border: 2px solid #fecc70;
+  border-radius: 5px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#a64eda), color-stop(48%, #d960a8), to(#ef2f85));
+  background-image: linear-gradient(to right, #a64eda 0%, #d960a8 48%, #ef2f85 100%);
+  -webkit-box-shadow: 0 3px 0 #c24437, inset 3px 3px 0 rgba(0, 0, 0, 0.18823529);
+          box-shadow: 0 3px 0 #c24437, inset 3px 3px 0 rgba(0, 0, 0, 0.18823529);
+}
+.gamebg .countdown > div span {
+  font-family: arial, sans-serif;
+  font-size: 22px;
+  position: relative;
+  top: 2px;
+  margin: 0 .2em;
+}
+.gamebg .ribbon > div {
+  line-height: 23px;
+  width: 260px;
+  height: 27px;
+  margin: 12px auto;
+  color: #ff4665;
+  background-image: url(../images/ribbon@3x.png);
+  background-size: 100% auto;
+}
+.gamebg .star > div > div {
+  height: 20px;
+  text-align: left;
+  border-radius: 100px;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(1%, rgba(255, 255, 255, 0.25)), color-stop(32%, rgba(255, 255, 255, 0.01)), color-stop(99%, rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.25) 1%, rgba(255, 255, 255, 0.01) 32%, rgba(255, 255, 255, 0) 99%);
+}
+.gamebg .star > div > div svg {
+  height: 100%;
+}
+.gamebg .star01 > div {
+  -webkit-transform: translate3d(88%, -125px, -70px) rotateZ(-35deg);
+          transform: translate3d(88%, -125px, -70px) rotateZ(-35deg);
+}
+.gamebg .star02 > div {
+  -webkit-transform: translate3d(-45%, -100px, -500px) rotateZ(-35deg);
+          transform: translate3d(-45%, -100px, -500px) rotateZ(-35deg);
+}
+.gamebg .star03 > div {
+  -webkit-transform: translate3d(40%, 60px, -100px) rotateZ(-35deg);
+          transform: translate3d(40%, 60px, -100px) rotateZ(-35deg);
+}
+.gamebg .star04 > div {
+  -webkit-transform: translate3d(57%, 127px, 230px) rotateZ(-35deg);
+          transform: translate3d(57%, 127px, 230px) rotateZ(-35deg);
+}
+.gamebg .star05 > div {
+  -webkit-transform: translate3d(84%, -83px, -100px) rotateZ(-35deg);
+          transform: translate3d(84%, -83px, -100px) rotateZ(-35deg);
+}
+.gamebg .star06 > div {
+  -webkit-transform: translate3d(-224%, -651px, -2171px) rotateZ(-35deg);
+          transform: translate3d(-224%, -651px, -2171px) rotateZ(-35deg);
+}
+.gamebg .star07 > div {
+  -webkit-transform: translate3d(-9%, -41px, -40px) rotateZ(-35deg);
+          transform: translate3d(-9%, -41px, -40px) rotateZ(-35deg);
+}
+.gamebg .star08 > div {
+  -webkit-transform: translate3d(-121%, -599px, -1200px) rotateZ(-35deg);
+          transform: translate3d(-121%, -599px, -1200px) rotateZ(-35deg);
+}
+.gamebg .star09 > div {
+  -webkit-transform: translate3d(-15%, -180px, -190px) rotateZ(-35deg);
+          transform: translate3d(-15%, -180px, -190px) rotateZ(-35deg);
+}
+.gamebg .mouth > div {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  width: 246px;
+  margin-left: -123px;
+}
+.gamebg .mouth > div .score_mask {
+  position: absolute;
+  bottom: 58%;
+  left: 5%;
+  overflow: hidden;
+  width: 90%;
+  height: 90px;
+}
+.gamebg .mouth > div .score {
+  line-height: 14px;
+  position: relative;
+  bottom: -20px;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #9e0232), to(#840e3d));
+  background-image: linear-gradient(#9e0232 60%, #840e3d 100%);
+}
+.gamebg .mouth > div .score span {
+  font-size: 50px;
+  line-height: 50px;
+  display: block;
+}
+.gamebg .mouth > div .score:after {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 20px;
+  content: '';
+  background-image: url(../images/serrated@3x.png);
+  background-size: 100% auto;
+}
+.ctadiv {
+  position: absolute;
+  bottom: 136px;
+  left: 50%;
+  width: 320px;
+  margin-left: -160px;
+}
+.ctadiv .buttdiv {
+  overflow: hidden;
+  height: 102px;
+  padding: 5px;
+  border: 2px solid #edd100;
+  border-radius: 14px;
+  background-color: #cb181b;
+  -webkit-box-shadow: inset 0 0 61px #f9c523, 0 5px 0 #8f1338, 0 -3px 0 #f7a036;
+          box-shadow: inset 0 0 61px #f9c523, 0 5px 0 #8f1338, 0 -3px 0 #f7a036;
+}
+.ctadiv .buttdiv > div {
+  position: relative;
+  display: none;
+  float: left;
+  width: 49%;
+  height: 93px;
+}
+.ctadiv .buttdiv svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ctadiv .buttdiv img {
+  padding: 7% 7% 5% 7%;
+}
+.ctadiv .buttdiv .butt {
+  font-size: 16px;
+  width: 90%;
+  padding: 1px 0;
+  color: #9e0232;
+  border: 2px solid #edd100;
+  border-radius: 4px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f09930), to(#ffe436));
+  background-image: linear-gradient(to right, #f09930 0%, #ffe436 100%);
+}
+.ctadiv .buttdiv .coupons {
+  float: right;
+}
+.ctadiv .buttdiv .got .butt {
+  color: #fff;
+  border-color: #d93b36;
+  background-color: #9d1532;
+  background-image: none;
+}
+.ctadiv .buttdiv .got .svgpathanimation {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  stroke: #e48416;
+}
+.ctadiv .bound {
+  text-align: center;
+}
+.ctadiv .bound p {
+  font-size: 16px;
+  margin: 4.3%;
+  color: #fff;
+}
+.ctadiv .bound .butt {
+  color: #fff;
+  border-color: #d93b36;
+  background-color: #9d1532;
+  background-image: none;
+}
+.ctadiv .bound .svgpathanimation {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  stroke: #e48416;
+}
+.ctadiv .nochance p {
+  font-size: 14px;
+  margin: 25px 4px;
+  color: #fff;
+}
+.ctadiv .nochance .svgpathanimation {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  stroke: #e48416;
+}
+.ctadiv .ctatitle {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+  position: relative;
+  z-index: 1;
+  width: 10em;
+  margin: 0 auto;
+  padding: 4px 0;
+  text-align: center;
+  color: #fff;
+  border: 2px solid #fecc70;
+  border-radius: 5px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #ef6b3f), to(#fae235));
+  background-image: linear-gradient(to bottom, #ef6b3f 30%, #fae235 100%);
+  -webkit-box-shadow: 0 3px 0 #c24437;
+          box-shadow: 0 3px 0 #c24437;
+}
+.svgpath {
+  opacity: 1;
+  fill: none;
+  stroke: #edd100;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 2,6;
+  stroke-dashoffset: 0;
+}
+.svgpathanimation {
+  -webkit-animation-name: svgpathanimation;
+          animation-name: svgpathanimation;
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.score {
+  -webkit-animation-name: score;
+          animation-name: score;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-timing-function: cubic-bezier(0.95, 0.07, 0.76, 1.13);
+          animation-timing-function: cubic-bezier(0.95, 0.07, 0.76, 1.13);
+  -webkit-animation-delay: .6s;
+          animation-delay: .6s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+@-webkit-keyframes score {
+  from {
+    -webkit-transform: translate3d(0%, 90%, 0px);
+            transform: translate3d(0%, 90%, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(0%, 0%, 0px);
+            transform: translate3d(0%, 0%, 0px);
+  }
+}
+@keyframes score {
+  from {
+    -webkit-transform: translate3d(0%, 90%, 0px);
+            transform: translate3d(0%, 90%, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(0%, 0%, 0px);
+            transform: translate3d(0%, 0%, 0px);
+  }
+}
+@-webkit-keyframes svgpathanimation {
+  from {
+    stroke-dashoffset: 0 ;
+    -webkit-filter: drop-shadow(0px 0px 0px #ffffff);
+            filter: drop-shadow(0px 0px 0px #ffffff);
+  }
+  to {
+    stroke-dashoffset: 8 ;
+    -webkit-filter: drop-shadow(0px 0px 2px #ffd600);
+            filter: drop-shadow(0px 0px 2px #ffd600);
+  }
+}
+@keyframes svgpathanimation {
+  from {
+    stroke-dashoffset: 0 ;
+    -webkit-filter: drop-shadow(0px 0px 0px #ffffff);
+            filter: drop-shadow(0px 0px 0px #ffffff);
+  }
+  to {
+    stroke-dashoffset: 8 ;
+    -webkit-filter: drop-shadow(0px 0px 2px #ffd600);
+            filter: drop-shadow(0px 0px 2px #ffd600);
+  }
+}
+@-webkit-keyframes star {
+  from {
+    -webkit-transform: translate3d(50%, -140px, 0px);
+            transform: translate3d(50%, -140px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(0%, 0%, 0px);
+            transform: translate3d(0%, 0%, 0px);
+  }
+}
+@keyframes star {
+  from {
+    -webkit-transform: translate3d(50%, -140px, 0px);
+            transform: translate3d(50%, -140px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(0%, 0%, 0px);
+            transform: translate3d(0%, 0%, 0px);
+  }
+}
+@-webkit-keyframes special_coupons {
+  from {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  to {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+@keyframes special_coupons {
+  from {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  to {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+@-webkit-keyframes perspective {
+  from {
+    -webkit-perspective: 200;
+            perspective: 200;
+  }
+  to {
+    -webkit-perspective: 500;
+            perspective: 500;
+  }
+}
+@keyframes perspective {
+  from {
+    -webkit-perspective: 200;
+            perspective: 200;
+  }
+  to {
+    -webkit-perspective: 500;
+            perspective: 500;
+  }
+}

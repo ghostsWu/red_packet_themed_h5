@@ -1,0 +1,600 @@
+html
+{
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #393939;
+}
+*
+{
+    box-sizing: border-box;;
+}
+.safezone
+{
+    max-width: 480px;
+    max-height: 1040px;
+}
+
+
+body
+{
+    font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei','微软雅黑',Arial,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.4;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    margin: 0 auto;
+    padding: 0;
+
+    text-align: center;
+
+    border: 0;
+    /* Rectangle: */
+    background-image: radial-gradient(
+    circle at center 80%,
+    #ecb254 11%,
+    #e39863 37%,
+    #bd22a4 64%,
+    #3c2376 100%);
+    box-shadow: 0 2px 14px rgba(17, 17, 17, .2);
+
+    .safezone;
+}
+
+img
+{
+    max-width: 100%;
+}
+
+.layer
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+.gamebg
+{
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    animation-name: perspective;
+    animation-duration: 6s;
+    // animation-direction: alternate;
+    animation-play-state: running;
+    animation-timing-function: cubic-bezier(0, 0, .21, 1.09);
+    // animation-delay: 2s;
+    animation-iteration-count: 1;
+
+    animation-fill-mode: both;
+    perspective: 500;
+
+    .layer
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+    .special_coupons
+    {
+        position: absolute;
+        z-index: -1;
+        top: -17px;
+        right: -17px;
+
+        width: 76px;
+
+        transform-origin: 20% 50%;
+        animation-name: special_coupons;
+        animation-duration: 2s;
+        animation-play-state: running;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+
+
+
+
+
+    .earth > div
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 50%;
+
+        background-image: url(../images/earth@3x.png);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: 100% auto;
+    }
+
+    .phone > div
+    {
+        position: absolute;
+        bottom: 14%;
+        left: -6%;
+
+        width: 66%;
+        height: 100%;
+
+        background-image: url(../images/phone@3x.png);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: 100% auto;
+    }
+
+    .pocket > div
+    {
+        position: absolute;
+        right: -6%;
+        bottom: 18%;
+
+        width: 66%;
+        height: 100%;
+
+        background-image: url(../images/pocket@3x.png);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: 100% auto;
+    }
+
+    .title > div
+    {
+        width: 84%;
+        margin: 60px auto;
+    }
+
+    .countdown > div
+    {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+
+        width: 170px;
+        // display: initial;
+        margin: 44px auto;
+        padding: 2px;
+
+        text-align: center;
+
+        color: #fff;
+        border: 2px solid #fecc70;
+        border-radius: 5px;
+        background-image: linear-gradient(to right, #a64eda 0%, #d960a8 48%, #ef2f85 100%);
+        box-shadow: 0 3px 0 #c24437,inset 3px 3px 0 rgba(0, 0, 0, .18823529411764706);
+
+        span
+        {
+            font-family: arial, sans-serif;
+            font-size: 22px;
+
+            position: relative;
+            top: 2px;
+            // line-height: 24px;
+
+            margin: 0 .2em;
+        }
+    }
+
+    .ribbon > div
+    {
+        line-height: 23px;
+
+        width: 260px;
+        height: 27px;
+        margin: 12px auto;
+
+        color: #ff4665;
+        background-image: url(../images/ribbon@3x.png);
+        background-size: 100% auto;
+    }
+
+    .star > div > div
+    {
+        height: 20px;
+        // transform: rotateZ(-35deg);
+
+        text-align: left;
+
+        border-radius: 100px;
+        background-image: -webkit-linear-gradient(left, rgba(255,255,255,.25) 1%, rgba(255,255,255,.01) 32%, rgba(255,255,255,.00) 99%);
+        background-image:      -o-linear-gradient(left, rgba(255,255,255,.25) 1%, rgba(255,255,255,.01) 32%, rgba(255,255,255,.00) 99%);
+        background-image:         linear-gradient(to right, rgba(255,255,255,.25) 1%, rgba(255,255,255,.01) 32%, rgba(255,255,255,.00) 99%);
+
+
+
+        svg
+        {
+            height: 100%;
+        }
+    }
+
+
+
+
+
+    .star01 > div
+    {
+        transform: translate3d(88%, -125px,     -70px) rotateZ(-35deg);
+    }
+    .star02 > div
+    {
+        transform: translate3d(-45%, -100px,    -500px) rotateZ(-35deg);
+    }
+    .star03 > div
+    {
+        transform: translate3d(40%, 60px,       -100px) rotateZ(-35deg);
+    }
+    .star04 > div
+    {
+        transform: translate3d(57%, 127px,  230px) rotateZ(-35deg);
+    }
+    .star05 > div
+    {
+        transform: translate3d(84%, -83px,  -100px) rotateZ(-35deg);
+    }
+    .star06 > div
+    {
+        transform: translate3d(-224%, -651px,   -2171px) rotateZ(-35deg);
+    }
+    .star07 > div
+    {
+        transform: translate3d(-9%, -41px,  -40px) rotateZ(-35deg);
+    }
+    .star08 > div
+    {
+        transform: translate3d(-121%, -599px,   -1200px) rotateZ(-35deg);
+    }
+    .star09 > div
+    {
+        transform: translate3d(-15%, -180px,    -190px) rotateZ(-35deg);
+    }
+
+    .mouth > div
+    {
+        position: absolute;
+        bottom: 12px;
+        left: 50%;
+
+        width: 246px;
+        margin-left: 0 - 246px /2 ;
+
+        .score_mask
+        {
+            // background-color: #111;
+            position: absolute;
+            bottom: 58%;
+            left: 5%;
+
+            overflow: hidden;
+
+            width: 90%;
+            height: 90px;
+        }
+
+        .score
+        {
+            line-height: 14px;
+
+            position: relative;
+            bottom: -20px;
+
+            width: 100%;
+            height: 100%;
+            // padding: 6px;
+
+            color: #fff;
+            background-image: linear-gradient(#9e0232 60%, #840e3d 100%);
+
+            span
+            {
+                font-size: 50px;
+                line-height: 50px;
+
+                display: block;
+            }
+
+            &:after
+            {
+                position: absolute;
+                top: -20px;
+                left: 0;
+
+                display: block;
+
+                width: 100%;
+                height: 20px;
+
+                content: '';
+
+                background-image: url(../images/serrated@3x.png);
+                background-size: 100% auto;
+            }
+        }
+    }
+}
+
+
+
+.ctadiv
+{
+    position: absolute;
+    bottom: 136px;
+    left: 50%;
+
+    width: 320px;
+    margin-left: 0 - 320px / 2;
+
+
+
+    .buttdiv
+    {
+        overflow: hidden;
+
+        height: 102px;
+        padding: 5px;
+
+        border: 2px solid #edd100;
+        border-radius: 14px;
+        background-color: #cb181b;
+        box-shadow: inset 0 0 61px #f9c523,
+        0 5px 0 #8f1338,
+        0 -3px 0 #f7a036;
+
+        & > div
+        {
+            position: relative;
+
+            display: none;
+            float: left;
+
+            width: 49%;
+            height: 93px;
+            // margin: 1.4%;
+        }
+
+        svg
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        img
+        {
+            padding: 7% 7% 5% 7%;
+        }
+
+        .butt
+        {
+            font-size: 16px;
+
+            width: 90%;
+            padding: 1px 0;
+
+            color: #9e0232;
+            border: 2px solid #edd100;
+            border-radius: 4px;
+            background-image: linear-gradient(to right, #f09930 0%, #ffe436 100%);
+        }
+
+        .coupons
+        {
+            float: right;
+        }
+
+        .got
+        {
+            .butt
+            {
+                color: #fff;
+                border-color: #d93b36;
+                background-color: #9d1532;
+                background-image: none;
+            }
+
+            .svgpathanimation
+            {
+                animation-play-state: paused;
+
+                stroke: #e48416;
+            }
+        }
+    }
+
+    .bound
+    {
+        text-align: center;
+        p
+        {
+            font-size: 16px;
+
+            margin: 4.3%;
+
+            color: #fff;
+        }
+
+        .butt
+        {
+            color: #fff;
+            border-color: #d93b36;
+            background-color: #9d1532;
+            background-image: none;
+        }
+
+        .svgpathanimation
+        {
+            animation-play-state: paused;
+
+            stroke: #e48416;
+        }
+    }
+
+    .nochance
+    {
+        p
+        {
+            font-size: 14px;
+
+            margin: 25px 4px;
+
+            color: #fff;
+        }
+
+
+        .svgpathanimation
+        {
+            animation-play-state: paused;
+
+            stroke: #e48416;
+        }
+    }
+
+    .ctatitle
+    {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 20px;
+
+        position: relative;
+        z-index: 1;
+
+        width: 10em;
+        margin: 0 auto;
+        padding: 4px 0;
+
+        text-align: center;
+
+        color: #fff;
+        border: 2px solid #fecc70;
+        border-radius: 5px;
+        background-image: linear-gradient(to bottom, #ef6b3f 30%, #fae235 100%);
+        box-shadow: 0 3px 0 #c24437;
+    }
+}
+
+.svgpath
+{
+    opacity: 1;
+
+    fill: none;
+    stroke: #edd100;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 2,6;
+    stroke-dashoffset: 0;
+}
+
+.svgpathanimation
+{
+    animation-name: svgpathanimation;
+    animation-duration: .4s;
+    // animation-direction: alternate;
+    animation-play-state: running;
+    animation-timing-function: linear;
+    // animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+.score{
+    animation-name: score;
+    animation-duration: .5s;
+    animation-timing-function: cubic-bezier(0.95, 0.07, 0.76, 1.13);
+    animation-delay: .6s;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+
+    animation-fill-mode: both;
+}
+
+
+@keyframes score {
+    from { transform: translate3d(0%,90%,0px);}
+    to { transform: translate3d(0%,0%,0px) }
+}
+
+
+
+
+@keyframes svgpathanimation
+{
+    from
+    {
+        stroke-dashoffset: 0 ;
+        filter: drop-shadow(0px 0px 0px #fff);
+    }
+    to
+    {
+        stroke-dashoffset: 8 ;
+        filter: drop-shadow(0px 0px 2px #ffd600);
+    }
+}
+
+@keyframes star
+{
+    from
+    {
+        transform: translate3d(50%,-140px,0px);
+    }
+    to
+    {
+        transform: translate3d(0%,0%,0px);
+    }
+}
+
+@keyframes special_coupons
+{
+    from
+    {
+        transform: rotate(5deg);
+    }
+    to
+    {
+        transform: rotate(-5deg);
+    }
+}
+
+
+@keyframes perspective
+{
+    from
+    {
+        perspective: 200;
+    }
+    to
+    {
+        perspective: 500;
+    }
+}
+
+
+
+
+// .gamebg .star:nth-last-of-type(3){
+//      transform: translate3d(0%,0px,0px) rotateZ(-35deg);
+//  }
+
+
+
+// .star:nth-of-type(1) {transform: translate3d(0%,0px,0px) rotateZ(-35deg);}
+// .star:nth-of-type(2) {transform: translate3d(40px,0px,0px) rotateZ(-35deg);}
